@@ -1,4 +1,4 @@
 
-const begin = document.querySelector('beging');
+const araay = document.querySelector('array');
 
-console.log(1);
+console.log(array);
