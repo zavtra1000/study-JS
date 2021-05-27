@@ -1,12 +1,11 @@
 
-const araay = document.querySelector('array');
+let money = 50 ;
+let income;
+let addExpenses;
+let deposit;
+let mission; 
+let period;
 
-console.log(array);
+alert('Hello, world');
 
-alert(1)
-
-let message = function() {
-alert(' изучил гит')
-};
-
-let = ` <p> lorem lorem </p>`
+console.log(money);
