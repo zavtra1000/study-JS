@@ -7,11 +7,11 @@ let income = 'frilance';
 let addExpenses = +prompt("Перечислите возможные расходы за рассчитываемый период через запятую: Такси, Аренда, Звонки");
 let deposit = confirm("Есть ли у вас депозит в банке");
 
-let expenses1 = +prompt(" введите обязательную статью расходов");
+let expenses1 = prompt(" введите обязательную статью расходов");
 
 let amount1 = +prompt (" Во сколько это обойдется?");
 
-let expenses2 = +prompt(" введите обязательную статью расходов 2");
+let expenses2 = prompt(" введите обязательную статью расходов 2");
 
 let amount2 = +prompt (" Во сколько это обойдется? 2");
 
@@ -40,21 +40,21 @@ let budgetMonth = (expenses1 + expenses2 + amount1 + amount2 + addExpenses);
 console.log(budgetMonth);
 
 let target = (mission/budgetMonth);
-console.log(Math.round(target) .target);
+console.log(Math.round(target);
 
-let target = mission / budgetMonth;
-console.log(Math.float(target).target);
+let target2 = (budgetMonth/30);
+console.log(Math.floor(target2);
 
-let budgetDay
+let condition
 if (budgetDay > 1200) {
     console.log(" У вас высокий уровень дохода");
-}else if (budgetDay > 600 && < 1200) {
+}else if (budgetDay > 600 && budgetDay < 1200) {
     console.log(" У вас средний уровень дохода");
-} else if (budgetDay < 600 && > 0 ) {
+} else if (budgetDay < 600 && budgetDay > 0 ) {
     console.log(" К сожалению у вас уровень дохода ниже среднего");
-} else (budgetDay < 0) {
+} else (budgetDay < 0) 
     console.log(" Что то пошло не так");
-};
+;
 
 
 
