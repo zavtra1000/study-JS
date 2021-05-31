@@ -1,22 +1,65 @@
 
-let money = 10000 ;
+'use strict';
+
+let money = +prompt("Ваш месячный доход?");
+
 let income = 'frilance';
-let addExpenses = 'Taxi, Rental, Call';
-let deposit = true;
+let addExpenses = +prompt("Перечислите возможные расходы за рассчитываемый период через запятую: Такси, Аренда, Звонки");
+let deposit = confirm("Есть ли у вас депозит в банке");
+
+let expenses1 = +prompt(" введите обязательную статью расходов");
+
+let amount1 = +prompt (" Во сколько это обойдется?");
+
+let expenses2 = +prompt(" введите обязательную статью расходов 2");
+
+let amount2 = +prompt (" Во сколько это обойдется? 2");
+
+
 let mission = 99999999990; 
 let period = 7;
 
-console.log("money: ", money);
+console.log(typeof money);
 console.log("income: ", income);
 console.log("deposit: ", deposit);
-console.log(addExpenses.length);
+console.log(typeof addExpenses);
 console.log('период равен ' + period + ' месяцев' );
 console.log('Цель заработать ' + mission + ' долларов' );
-console.log(addExpenses.toLowerCase());
-console.log(addExpenses.split());
+
+
+console.log(typeof expenses1);
+console.log(typeof expenses2);
+console.log(typeof amount1);
+console.log(typeof amount2);
+
 
 let budgetDay = 1200;
-console.log('budgetDay: ', budgetDay/30);
+console.log(budgetDay / 30);
+
+let budgetMonth = (expenses1 + expenses2 + amount1 + amount2 + addExpenses);
+console.log(budgetMonth);
+
+let target = (mission/budgetMonth);
+console.log(Math.round(target) .target);
+
+let target = mission / budgetMonth;
+console.log(Math.float(target).target);
+
+let budgetDay
+if (budgetDay > 1200) {
+    console.log(" У вас высокий уровень дохода");
+}else if (budgetDay > 600 && < 1200) {
+    console.log(" У вас средний уровень дохода");
+} else if (budgetDay < 600 && > 0 ) {
+    console.log(" К сожалению у вас уровень дохода ниже среднего");
+} else (budgetDay < 0) {
+    console.log(" Что то пошло не так");
+};
+
+
+
+
+
 
 
 
