@@ -33,18 +33,11 @@ console.log(amount1);
 console.log(amount2);
 
 
-const getExpensesMonth = function(
-  expenses1,
-  expenses2,
-  amount1,
-  amount2,
-  addExpenses
-  ) {
-  budgetMonth = expenses1 + expenses2 + amount1 + amount2 + addExpenses;
+const getExpensesMonth = function(expenses1, expenses2, amount1, amount2, addExpenses) {
+  const budgetMonth = expenses1 + expenses2 + amount1 + amount2 + addExpenses;
+  return budgetMonth;
 };
-
-getExpensesMonth(expenses1, expenses2, amount1, amount2, addExpenses);
-console.log(budgetMonth);
+console.log(getExpensesMonth);
 
 // 2) Объявить функцию getAccumulatedMonth. Функция возвращает Накопления за месяц (Доходы минус расходы)
 
@@ -86,8 +79,8 @@ console.log("budgetDay: ", budgetDay);
 
 
 
-let budgetDay = 1200;
-console.log(budgetDay / 30);
+// let budgetDay = 1200;
+// console.log(budgetDay / 30);
 
 
 
