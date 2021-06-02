@@ -15,20 +15,20 @@ let money,
     let start = function(){
         money = prompt (' Ваш месячный доход?');
 
-        while (isNaN(parseFloat(money)) {
-            money = prompt(" Ваш месячный доход?");
+        while (!isNumber(money)) {
+          money = prompt(" Ваш месячный доход?");
         }
     };
     start();
 
 
-let showTypeof = function(item){
-    console.log(typeof item);
-};
+// let showTypeof = function(){
+//     console.log(typeof item);
+// };
 
-showTypeOf(money);
-showTypeOf(income);
-showTypeOf(deposit);
+// showTypeOf(money);
+// showTypeOf(income);
+// showTypeOf(deposit);
 
 
 
@@ -36,7 +36,7 @@ showTypeOf(deposit);
 
 let expenses = [];
 
-console.log(addExpenses.toLowerCase().split(','));
+// console.log(addExpenses.toLowerCase().split(','));
 
 
 let getExpensesMonth = function() {
@@ -45,11 +45,12 @@ let getExpensesMonth = function() {
     for (let i=0; i<2; i++){
 
         expenses [i] = prompt(" введите обязательную статью расходов", " Транспорт");
-
-        sum += +prompt(' Во сколько это обойдется?')
-    }
+            sum += +prompt(' Во сколько это обойдется?');
+        do {
+            sum += +prompt(' Во сколько это обойдется?');
+        } while (!isNumber(sum));
+    };
     
-    console.log(expenses);
   return sum;
 };
 
@@ -67,9 +68,17 @@ let getAccumulatedMonth = function () {
 let accumulatedMonth = getAccumulatedMonth()
 
 
-let getTargetMonth = function () {
-    return mission / accumulatedMonth;
-};
+function getTargetMonth() {
+  let res = Math.floor(mission / accumulatedMonth);
+  if (res > 0) {
+    console.log("Цель будет достигнута: " + res + "месяцев");
+  } else {
+    console.log("Цель не будет достигнута");
+  }
+
+  return res;
+}
+getTargetMonth();
 
 
 // let targetMission = getTargetMonth();
@@ -99,7 +108,7 @@ let budgetDay = accumulatedMonth / 30;
 // let getTargetMonth = (mission/budgetMonth);
 
 
-console.log("за сколько месяцев будет достигнута цель: ", +  Math.celi(getTargetMonth()));
+// console.log("за сколько месяцев будет достигнута цель: ", +  Math.celi(getTargetMonth()));
 
 // let budgetDay = Math.floor(accumulatedMonth / 30);
 
