@@ -7,33 +7,38 @@ let income = 'frilance';
 let addExpenses = +prompt("Перечислите возможные расходы за рассчитываемый период через запятую: Такси, Аренда, Звонки");
 let deposit = confirm("Есть ли у вас депозит в банке");
 
-let expenses1 = prompt(" введите обязательную статью расходов");
-
-let amount1 = +prompt (" Во сколько это обойдется?");
-
-let expenses2 = prompt(" введите обязательную статью расходов 2");
-
-let amount2 = +prompt (" Во сколько это обойдется? 2");
-
-
 let mission = 99999999990; 
 let period = 7;
 
-console.log(money);
-console.log("income: ", income);
-console.log("deposit: ", deposit);
-console.log(addExpenses);
-console.log('период равен ' + period + ' месяцев' );
-console.log('Цель заработать ' + mission + ' долларов' );
+// console.log(money);
+// console.log("income: ", income);
+// console.log("deposit: ", deposit);
+// console.log(addExpenses);
+// console.log('период равен ' + period + ' месяцев' );
+// console.log('Цель заработать ' + mission + ' долларов' );
+
+// console.log(expenses1);
+// console.log(expenses2);
+// console.log(amount1);
+// console.log(amount2);
+
+let showTypeof = function(item){
+    console.log(typeof item);
+};
+
+showTypeOf(money);
+showTypeOf(income);
+showTypeOf(deposit);
+
+let expenses1 = prompt(" введите обязательную статью расходов"),
+    amount1 = +prompt (" Во сколько это обойдется?"),
+    expenses2 = prompt(" введите обязательную статью расходов 2"),
+    amount2 = +prompt (" Во сколько это обойдется? 2");
+
+console.log(addExpenses.toLowerCase().split(','));
 
 
-console.log(expenses1);
-console.log(expenses2);
-console.log(amount1);
-console.log(amount2);
-
-
-const getExpensesMonth = function(expenses1, expenses2, amount1, amount2, addExpenses) {
+let getExpensesMonth = function(expenses1, expenses2, amount1, amount2, addExpenses) {
   const budgetMonth = expenses1 + expenses2 + amount1 + amount2 + addExpenses;
   return budgetMonth;
 };
@@ -66,9 +71,7 @@ const showTypeOf = function(data){
 };
 
 // 7)
-showTypeOf(money);
-showTypeOf(income);
-showTypeOf(deposit);
+
 
 console.log("getExpensesMonth: ", getExpensesMonth);
 console.log('addExpenses: ', addExpenses);
