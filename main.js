@@ -1,20 +1,33 @@
 
 'use strict';
 
-let money = +prompt("Ваш месячный доход?");
-    income = 'frilance';
-    addExpenses = +prompt("Перечислите возможные расходы за рассчитываемый период через запятую: Такси, Аренда, Звонки");
-    deposit = confirm("Есть ли у вас депозит в банке");
-    mission = 99999999990; 
+let money,
+    income = 'frilance',
+    addExpenses = +prompt("Перечислите возможные расходы за рассчитываемый период через запятую: Такси, Аренда, Звонки"),
+    deposit = confirm("Есть ли у вас депозит в банке"),
+    mission = 99999999990,
     period = 7;
+
+    let start = function(){
+        money = prompt (' Ваш месячный доход?');
+
+        while (isNaN(money) || money.trim() ==='' || money === null) {
+            money = prompt(" Ваш месячный доход?");
+        }
+    };
+    start();
+
 
 let showTypeof = function(item){
     console.log(typeof item);
 };
 
-// showTypeOf(money);
-// showTypeOf(income);
-// showTypeOf(deposit);
+showTypeOf(money);
+showTypeOf(income);
+showTypeOf(deposit);
+
+
+
 
 
 let expenses = [];
