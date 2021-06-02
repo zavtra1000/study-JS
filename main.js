@@ -1,6 +1,10 @@
 
 'use strict';
 
+let isNumber = function(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n)
+}
+
 let money,
     income = 'frilance',
     addExpenses = +prompt("Перечислите возможные расходы за рассчитываемый период через запятую: Такси, Аренда, Звонки"),
