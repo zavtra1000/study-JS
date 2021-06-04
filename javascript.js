@@ -1,15 +1,21 @@
 
+'use strict';
 
+let randon = (max) => {
+    return Math.floor(Math.random() * Math.floor(max));
+}
 
 let isNumber = function(n) {
     return !isNaN(parseFloat(n)) && isFinite(n)
+}
     
 let game = function() {
-    let gNum = getRandomInt(100);
+    let gNum = random(100);
+    console.log('gNum: ', gNum);
 }
 
-let guessTheNumber = function() {
-    let guessNumber = prompt((' Угадай число от 1 до 100')
+let guessTheNumbers = function() {
+    let guessNumber = prompt (' Угадай число от 1 до 100')
     if (guessNumber === null ) {
         alert ('Игра окончена');
         return;
@@ -17,10 +23,10 @@ let guessTheNumber = function() {
         let guessNum = +guessNumber;
         if (guessNum > gNum) {
             alert(' Загаданное число меньше')
-            guessTheNumber();
+            guessTheNumbers();
         } else if (guessNum < gNum) {
             alert(' Загаданное число больше')
-            guessTheNumber();
+            guessTheNumbers();
         } else {
             if (confirm ('Поздравляю, вы угадали')) {
                 game();
@@ -31,11 +37,11 @@ let guessTheNumber = function() {
         }
     } else {
         alert ('Введите число');
-        guessTheNumber()
+        guessTheNumbers()
     }
 };
-guessTheNumber();
-};
+guessTheNumbers();
+
 game();
 
 
