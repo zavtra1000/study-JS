@@ -41,7 +41,6 @@ let guessTheNumbers = function() {
     }
 };
 guessTheNumbers();
-
 game();
 
 
