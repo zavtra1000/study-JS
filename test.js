@@ -49,8 +49,15 @@ let appData = {
     return sum;
   },
 
+  getExpensesMonth: function(){
+      appData.expensesMonth = 0;
+      for (let elem in appData.expenses){
+          appData.expensesMonth += appData.expenses[elem];
+      }
+  },
+
   getBudget: function(){
-      appData.budgetDay = appData.accumulatedMonth / 30;
+      return appData.budgetMonth - appData.budgetDay;
   },
 
   getAccumulatedMonth: function () {
@@ -75,7 +82,7 @@ let appData = {
     } else {
       return " Высокий уровень дохода";
     }
-    console.log(getStatusIncome());
+    // console.log(getStatusIncome());
   },
 };
 
@@ -84,5 +91,7 @@ appData.asking();
 appData.getExpensesMonth();
 appData.getTargetMonth();
 console.log(appData.getStatusIncome());
+console.log('Расходы за месяц: ', appData.expensesMonth());
+console.log('Уровень дохода: ', appData.getStatusIncome());
 
 
