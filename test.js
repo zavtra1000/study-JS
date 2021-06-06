@@ -91,7 +91,10 @@ appData.asking();
 appData.getExpensesMonth();
 appData.getTargetMonth();
 console.log(appData.getStatusIncome());
-console.log('Расходы за месяц: ', appData.expensesMonth());
+// console.log('Расходы за месяц: ', appData.expensesMonth());
 console.log('Уровень дохода: ', appData.getStatusIncome());
-
+console.log('Наif программа включает в себя данные: ');
+for (let elem in appData){
+    console.log(elem, appData[elem]);
+}
 
