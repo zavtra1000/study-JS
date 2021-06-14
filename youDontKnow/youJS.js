@@ -48,7 +48,8 @@ getTitle[42].after(getTitle[43]);
 
 console.log('getTitle: ', getTitle);
 
-const fixTitleSix = document.querySelectorAll("li");
+const fixTitleSix = document.createElem("li");
+book[5].append(li);
 fixTitleSix[57].textContent = "Глава 8: За пределами ES6";
 
 console.log("fixTitle: ", fixTitle);
